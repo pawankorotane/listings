@@ -30,5 +30,5 @@ Test:
 ```docker exec -it zoopla_zoopla_1 sh```
 ```npm test```
 
-Ideally we need to have seperate Dockerfile for test you spin up the container, run all the tests and delete the container in the end. Because of time constrain I am able to implement this functionality.
+Ideally we need to have seperate Dockerfile for test to spin up the container, run all the tests and delete the container in the end. Because of time constrain I am not able to implement this functionality.
 
