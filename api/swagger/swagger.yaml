@@ -1,0 +1,282 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Zoopla Listing API
+# during dev, should point to your local machine
+host: localhost:3001
+
+# basePath prefixes all resource paths 
+basePath: /v1
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /swagger:
+    x-swagger-pipe: swagger_raw
+
+  /listings:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: listings
+    get:
+      description: Get All Listings
+      operationId: getAllListings
+      parameters:
+      - $ref: "#/parameters/offsetParam"
+      - $ref: "#/parameters/limitParam"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Listings"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  
+  /branches:
+    x-swagger-router-controller: branches
+    get:
+      description: Get All Listings
+      operationId: getAllBranches
+      parameters:
+      - $ref: "#/parameters/offsetParam"
+      - $ref: "#/parameters/limitParam"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Branches"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  
+  /listings/stats:
+    x-swagger-router-controller: stats
+    get:
+      description: Get Stats of listings
+      operationId: getAllListingsStats
+      parameters:
+      - $ref: "#/parameters/offsetParam"
+      - $ref: "#/parameters/limitParam"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/ListingsStats"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  
+  /branches/listings/stats:
+    x-swagger-router-controller: stats
+    get:
+      description: Get All Listings
+      operationId: getAllListingBranchStats
+      parameters:
+      - $ref: "#/parameters/offsetParam"
+      - $ref: "#/parameters/limitParam"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/BranchListingStats"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  
+# complex objects have schema definitions
+definitions:
+  Listing:
+    type: object
+    properties:
+      _id:
+        type: string
+        description : ID of the listing
+      listing:
+        type: string
+        description: Advertised Property
+      address:
+        type: string
+        description: Address of the property
+      first_publish_date:
+        type: string
+        format: date-time
+        description: Date the property was advertised first
+      listing_status:
+        type: string
+        description: Listing Status
+      no_of_bedrooms:
+        type: integer
+        description: Number of bedrooms
+      no_of_bathrooms:
+        type: integer
+        description: Number of bathrooms
+      price:
+        type: integer
+        description: Price of the property
+      currency:
+        type: string
+        description: Currency
+  Branches:
+    type: array
+    items:
+      type: object
+      properties:
+        _id:
+          type: string
+          description : Branch identifier
+        branch:
+          type: string
+          description : Branch name
+        address:
+          type: string
+          description : Branch Address
+        listing_count:
+          type: integer
+          description : Total Number of listings own by the branch
+
+  
+  ListingsStats:
+    type: array
+    items:
+      type: object
+      properties:
+        search_views:
+          type:
+            - number
+            - integer
+            - 'null'
+          description: Number of times the property appeared insearch pages
+        normal_detail_views:
+          type:
+            - number
+            - integer
+            - 'null'
+          description: Number of times users clicked from the search to detail page
+        premium_detail_views:
+          type:
+            - number
+            - integer
+            - 'null'
+          description: Number of times users clicked from the search to premium detail page
+        normal_click_through_rate:
+          type:
+            - number
+            - integer
+            - 'null'
+          description: Click through rate calculated as percentage of (normal detail views/ Search views)
+        premium_click_through_rate:
+          type:
+            - number
+            - integer
+            - 'null'
+          description: Click through rate calculated as percentage of (Premium detail views/ Search views)
+        listing:
+          type: object
+          properties:
+             _id:
+              type: string
+              description : Listing Identifier
+             listing_status:
+              type: string
+              description: Listing Status
+    
+  BranchListingStats:
+      type: array
+      items:
+        type: object
+        properties:
+          search_views:
+            type:
+            - number
+            - integer
+            - 'null'
+            description: Number of times the property appeared insearch pages
+          normal_detail_views:
+            type:
+            - number
+            - integer
+            - 'null'
+            description: Number of times users clicked from the search to detail page
+          premium_detail_views:
+            type:
+            - number
+            - integer
+            - 'null'
+            description: Number of times users clicked from the search to premium detail page
+          normal_click_through_rate:
+            type:
+            - number
+            - integer
+            - 'null'
+            description: Click through rate calculated as percentage of (normal detail views/ Search views)
+          premium_click_through_rate:
+            type:
+            - number
+            - integer
+            - 'null'
+            description: Click through rate calculated as percentage of (Premium detail views/ Search views)
+          _id:
+            type: string
+            description : Branch identifier
+          branch:
+            type: string
+            description : Branch name
+          address:
+            type: string
+            description : Branch Address
+    
+            
+  Listings:
+     type: array
+     items:
+        $ref: "#/definitions/Listing"
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  
+parameters:
+    offsetParam:  # <-- Arbitrary name for the definition that will be used to refer to it.
+      in: query
+      name: offset
+      required: false
+      type: integer
+      minimum: 0
+      description: The number of items to skip before starting to collect the result set.
+    limitParam:
+      in: query
+      name: limit
+      required: false
+      type: integer
+      minimum: 1
+      maximum: 50
+      default: 20
+      description: The numbers of items to return.
+      
+    
+  
+
+    

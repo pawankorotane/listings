@@ -1,0 +1,8 @@
+FROM node:8.9-alpine
+ENV NODE_ENV development
+WORKDIR /usr/src/app
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --silent && npm install nodemon -g && npm install swagger -g && mv node_modules ../
+COPY . .
+EXPOSE 3001
+CMD npm start:dev

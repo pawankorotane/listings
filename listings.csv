@@ -1,0 +1,29 @@
+Listing,Address,First published date,Listing status,No of bedrooms,No of bathrooms,Price,Branch name,Branch address,Search views,normal detail views ,Premium detail views,normal click through rate,Premium Click through rate
+3 bed house,"Strachey close, saffron walden",02/02/2018,sale,3,2,"£200,000.00",Zoopla realtors,"Southwark, London",33218,5474,,16.48,0
+4 bed semi-detached house,"somerset close, cambridge",03/02/2018,sale,4,3,"£400,000.00",Zoopla realtors,"Southwark, London",19027,781,,4.1,0
+2 bed bungalow,"copper row, London",04/02/2018,sale,2,1,"£600,000.00",Zoopla realtors,"Southwark, London",4301,3755,6518,87.31,151.55
+1 bed studio,"Southwark, london",05/02/2018,under offer,1,1,"£300,000.00",Zoopla realtors,"Southwark, London",19893,7856,8755,39.49,44.01
+holiday apartment,"75006, Paris 6Ème, France",06/02/2018,sale,1,1,"€ 795,000",French Realtors,"75006, Paris 6Ème, France",5700,4890,2402,85.79,42.14
+5 bed detached house,"albemarle way, london",07/02/2018,sold,5,3,"£800,000.00",Zoopla realtors,"Southwark, London",49445,7798,695,15.77,1.41
+4 bed semi-detached house,"Nusire road, Manchester",08/02/2018,sale,4,2,"£200,000.00",Zoopla realtors,"Southwark, London",45364,8137,3974,17.94,8.76
+3 bed bungalow,"Jamaica road, london",09/02/2018,under offer,3,2,"£400,000.00",Zoopla realtors,"Southwark, London",38413,2620,5811,6.82,15.13
+1 bed studio,"Rotherhithe way, London",10/02/2018,sale,1,1,"£600,000.00",PSG realtors,"Braintree, Colchester",44874,2676,7092,5.96,15.8
+2 bed holiday apartment,"Mansel way, London",11/02/2018,sale,2,1,"£300,000.00",PSG realtors,"Braintree, Colchester",49982,2887,6639,5.78,13.28
+2 bed flat,"Charming road, london",12/02/2018,sale,2,1,"£400,000.00",PSG realtors,"Braintree, Colchester",20976,5907,7733,28.16,36.87
+House boat for sale,"Tennis road, cambridge",13/02/2018,sold_sstc,0,1,"£600,000.00",PSG realtors,"Braintree, Colchester",41069,751,3449,1.83,8.4
+3 bed house,"Colwin road, manchester",14/02/2018,sale,3,1,"£300,000.00",PSG realtors,"Braintree, Colchester",35056,9280,4439,26.47,12.66
+4 bed semi-detached house,"colbert road, birmingham",15/02/2018,sale,4,2,"£400,000.00",PSG realtors,"Braintree, Colchester",32414,1919,9106,5.92,28.09
+2 bed bungalow,"new road, newcastle-upon-tyne",16/02/2018,sold_sstc,2,1,"£600,000.00",PSG realtors,"Braintree, Colchester",22817,834,9942,3.66,43.57
+1 bed studio,"london road, Kent",17/02/2018,sale,1,1,"£300,000.00",PSG realtors,"Braintree, Colchester",32643,3183,4170,9.75,12.77
+holiday apartment,"93260, Paris 6Ème, France",18/02/2018,under offer,2,2,"€ 995,000",French Realtors,"75006, Paris 6Ème, France",22795,7070,7353,31.02,32.26
+5 bed detached house,"Scotland road, Brighton",19/02/2018,sale,5,2,"£400,000.00",Jupix Realtors,"Thames way, London",43442,7366,8272,16.96,19.04
+4 bed semi-detached house,"Glasgow road, Edinburgh",06/02/2018,sale,4,2,"£600,000.00",Jupix Realtors,"Thames way, London",11457,4237,6794,36.98,59.3
+3 bed bungalow,"radison road, Isle-of-wight",07/02/2018,sold_sstc,3,2,"£300,000.00",Jupix Realtors,"Thames way, London",14280,5955,5488,41.7,38.43
+1 bed studio,"glenn road, york",08/02/2018,sale,1,1,"£600,000.00",Jupix Realtors,"Thames way, London",3229,7786,7348,241.13,227.56
+2 bed holiday apartment,"salobrena, barcelona, Spain",09/02/2018,sale,2,1,"€ 595,000",Mayfair International Realty,"A coruna, Galicia, Spain",27886,3454,7422,12.39,26.62
+2 bed holiday apartment,"A coruna, Galicia, Spain",10/02/2018,sale,2,1,"€ 495,000",Mayfair International Realty,"A coruna, Galicia, Spain",38944,4693,7931,12.05,20.37
+2 bed flat,"Scotland road, Brighton",11/02/2018,sale,2,1,"£600,000.00",Homesell ltd,"London road, Manchester",42202,2461,,5.83,0
+House boat for sale,"Glasgow road, Edinburgh",06/02/2018,sold_sstc,0,1,"£670,000.00",Homesell ltd,"London road, Manchester",17253,2355,,13.65,0
+3 bed house,"radison road, Isle-of-wight",07/02/2018,sale,3,1,"£600,000.00",Homesell ltd,"London road, Manchester",30310,1047,,3.45,0
+4 bed semi-detached house,"glenn road, york",28/02/2018,sale,4,2,"£699,000.00",Homesell ltd,"London road, Manchester",43959,5666,,12.89,0
+2 bed bungalow,"Tennison road, Northampton",28/02/2018,sold_sstc,2,1,"£599,000.00",Homesell ltd,"London road, Manchester",17291,9222,,53.33,0

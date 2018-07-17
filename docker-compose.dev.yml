@@ -1,0 +1,28 @@
+version: '2.1'
+services:
+  zoopla:
+    image: zoopla
+    build:
+      dockerfile: Dockerfile-dev
+      context: .
+    volumes:
+      - .:/usr/src/app
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+    ports:
+      - 3001:3001
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    command: nodemon --legacy-watch app.js
+  mongodb:
+    image: mongo
+    container_name: "mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    ports:
+        - 27017:27017
+    command: mongod
