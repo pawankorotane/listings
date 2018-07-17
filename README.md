@@ -1,5 +1,6 @@
 #Listing Service
 
+Host: http://localhost:3001
 
 Run in production
 
