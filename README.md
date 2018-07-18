@@ -8,7 +8,7 @@ Run in production
 
 Run in development
 
-```docker-compose -f docker-compose.dev.yaml up```
+```docker-compose -f docker-compose.dev.yml up```
 
 Data Import
 
